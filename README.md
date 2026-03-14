@@ -1,16 +1,45 @@
-# React + Vite
+# 🏎️ F1 待办事项 Todo List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+一个以 Formula 1 赛车为主题的待办事项应用，使用 React + Tailwind CSS 构建，数据存储于 localStorage。
 
-Currently, two official plugins are available:
+## 功能特性
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- ✅ 添加 / 完成 / 删除任务
+- 🔍 按状态筛选（全部 / 待完成 / 已完成）
+- 💾 localStorage 持久化存储
+- 🏎️ F1 赛车图片背景滚动播放（每 5 秒切换）
+- 💬 完成任务时弹出 F1 主题鼓励语
 
-## React Compiler
+## 技术栈
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19 + Vite 8
+- Tailwind CSS v4
+- localStorage
 
-## Expanding the ESLint configuration
+## 本地运行
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 更新记录
+
+### 2026-03-14
+
+**新增：F1 背景图轮播**
+- 使用 6 张 F1 赛车主题图片（来源：loremflickr.com）
+- 每 5 秒自动切换，带淡入淡出过渡动画
+- 添加半透明黑色遮罩，保证内容可读性
+
+**新增：鼓励语功能**
+- 内置 8 条 F1 主题中文鼓励语
+- 每次勾选完成任务时，随机弹出一条鼓励语
+- 鼓励语以黄色气泡形式展示，3 秒后自动消失
+
+**UI 优化**
+- 整体风格从浅色渐变改为赛车主题深色毛玻璃卡片
+- 主色调改为 F1 赛旗黄（yellow-400）
+- 标题增加 F1 赛车 Emoji 和副标题
